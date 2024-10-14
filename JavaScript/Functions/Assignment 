@@ -1,0 +1,202 @@
+ switch daysInMonth (month) {
+    switch (month) {
+        case 1:
+        case 3:
+        case 5:
+        case 7:
+        case 8:
+        case 10:
+        case 12:
+            return 31;
+        case 4:
+        case 6:
+        case 9:
+        case 11:
+            return 30;
+        case 2:
+            return 28;
+        default:
+            return "Invaliud Month"; 
+    }  
+}
+
+// assignment 2 arrays and loops
+
+function sumArray(arr) {
+    if (arr.length === 0) {
+      return 0;
+    }
+    const sum = arr.reduce((accumulator, current) => accumulator + current, 0);
+    return sum; 
+  }
+ 
+  //OR 
+
+  function sumArray (numbers) {
+    let sum = 0;
+
+    for (let i = 0; i < numbers.length; i++) {
+        sum += numbers[i];
+    }
+    return sum;
+  }
+  // 
+
+  function countSmilies(message) {
+    let count = 0
+    const smiley = ':)'; 
+
+  
+    for (let i = 0; i < message.length; i++) {
+       
+        if (message[i] === smiley[0] && message[i + 1] === smiley[1]) {
+            count++; 
+            i++;
+        }
+    }
+
+    return count; 
+}
+
+// or 
+
+function countSmilies(message) {
+    let count = 0;
+    for (let i = 0; i < message.length; i++) {
+      const char = message[i];
+      const char2 = message[i + 1];
+
+      if (char1 === ':' && char2 === ")") {
+        count++;
+        };
+    };
+    return count;
+    };
+
+    // assignment 3 Arrays and Objects
+
+    function printBio(user) {
+        return `This is ${user.name} ${user.surname} from ${user.address.country}.`
+      }
+
+      //
+
+      function filterPizzas(pizzas) {
+        const filteredPizzas = [];
+        
+        for (let i = 0; i < pizzas.length; i++) {
+          const pizza = pizzas[i];
+          
+          if (pizza.type !== "pineapple") {
+            filteredPizzas.push(pizza);
+            
+          }
+        }
+        
+        return filteredPizzas;
+      }
+
+      // or 
+
+      function filterPizzas(pizzas) {
+
+        return pizzas.filter(pizza => pizza.type !== 'pineapple');
+      }
+
+      // assignment js functions 
+
+      //calculate hours per day worked and days worked
+
+      function calculateHours (hoursPerDay, days) {
+        const totalHours = hoursPerDay * days;
+        return totalHours;
+      }
+      
+      // convert miles to kilometers 
+
+      function milesToKilometers (miles){
+        if (miles === undefined){
+          return 1.60934;
+        }
+        
+        const kilometers = miles * 1.60934
+        
+        return kilometers;
+      }
+
+      /* assesment 5 data types loops and conditionals
+       loop over the array arr, and check each number in the array if it is even or odd number
+       the function should return an array containing only odd numbers
+       if no odd numbers are present in the array arr, the function should return
+       an empty array */
+ 
+         function pickOdd (arr) {
+          const pickOdd = [];
+          
+          for (let i = 0; i < arr.length; i++) {
+             const number = arr[i];
+             
+             if (number % 2 !== 0) {
+                pickOdd.push(number);
+             }
+          }
+          
+          return pickOdd;
+        }
+
+// 
+
+/* implement the function sortProducts that takes one parameter matrix, which is an array of arrays
+example of matrix 
+category 'tech', procut 'iphone', price 1000
+inside the matrix array, each nested array holds objets, each object represents a product
+the function should loop over the matrix and create a new object conatining the products sorted by category
+the function should then return back this result object containing sorted products, stored in properties tech and food
+the result object should have the following structure 
+{
+ tech:  [ { tech product }, { tech product } ],
+ food:  [ { food product }, { food product } ],
+} */
+
+ function sortProducts(matrix) {
+    const result = {
+      tech: [],
+      food: []
+    };
+  
+    // Loop through each inner array in the matrix
+    for (let i = 0; i < matrix.length; i++) {
+      const products = matrix[i]; // Access the inner array
+  
+      // Loop through each product in the inner array
+      for (let j = 0; j < products.length; j++) {
+        const product = products[j];
+  
+        // Sort products based on their category
+        if (product.category === 'tech') {
+          result.tech.push(product);
+        } else if (product.category === 'food') {
+          result.food.push(product);
+        }
+      }
+    }
+  
+    return result;
+  }
+  
+  // Example input
+  const inputMatrix = [
+    [
+      { category: 'tech', product: "iPhone X", price: 320 },
+      { category: 'food', product: "Cheerios", price: 5 },
+    ],
+    [
+      { category: 'food', product: "Snickers", price: 1.5 },
+      { category: 'tech', product: "Air Pods", price: 129 },
+    ],
+  ];
+
+  
+  
+ 
+  

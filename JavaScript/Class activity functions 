@@ -1,0 +1,54 @@
+//ex 1 
+function convertDogYears (dogYears){
+    return dogYears * 7;
+}
+const result = convertDogYears(11);
+console.log(`11 dog years equalks ${result} human years`);
+
+//ex 2
+
+function convertDollarsToEuros (dollarAmount){
+    return dollarAmount * 0.92;
+}
+const result1 = convertDollarsToEuros(115);
+console.log(`115 euros equal ${result1} dollars`);
+
+//ex 3
+
+function findBootCamp (country){
+    if (country === "USA"){
+        console.log("Miami Campus");
+    }
+    else if (country === "France"){
+        console.log("Paris Campus");
+    }
+    else if (country === "Germany"){
+        console.log("Berlin");
+} else {
+    console.log("Remote");
+}
+}
+findBootCamp("USA");
+findBootCamp("France");
+findBootCamp("Germany");
+findBootCamp("Remote");
+
+//ex 4 
+function getDiscountInfo (employeeType){
+    if (employeeType === "part-time"){
+        console.log("10% discount");
+    }
+    else if (employeeType === "full-time"){
+        console.log("20% discount");
+    }
+    else if (employeeType === "Manager"){
+        console.log("30% discount");
+} else {
+    console.log("no discount");
+}
+}
+getDiscountInfo("Manager");
+
+
+//ex 5
+

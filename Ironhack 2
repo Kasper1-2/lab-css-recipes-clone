@@ -1,0 +1,6 @@
+let greeting = "";
+greeting += "Hello there.";
+console.log(greeting); // ==> Hello there.
+
+greeting += " Welcome to Ironhack!"
+console.log(greeting); // ==> Hello there. Welcome to Ironhack!
