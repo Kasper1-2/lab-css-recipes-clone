@@ -1,3 +1,5 @@
+/*
+
 function sum (num1, num2) {
     return num1 + num2;
   }
@@ -20,4 +22,4 @@ function sum (num1, num2) {
   // we can start using it in the rest of the program
   console.log("result1", result1);
   console.log("result2", result2);
-  
+*/
